@@ -19,7 +19,11 @@ function adicionar_amigo() {
 
 
 function mostrar_amigos() {
-    if (amigos.length <= 1) {
-        alert("Para efetuar o sorteio, é necessário adicionar pelo menos dois amigos.")
+    let printar_lista = getElementById("listaAmigos");
+    printar_lista.innerHTML = "";
+    for (let amigo of amigos){
+        let item = document.createElement("li");
+        item.textContent = nome;
+        printar_lista.appendChild(item);
     }
 }
